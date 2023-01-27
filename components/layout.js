@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import Sprite from './sprite';
+import Coffee from './coffee';
 
 const name = 'Second Coffee';
 export const siteTitle = 'Second Coffee';
@@ -15,7 +15,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Thoughts on technology and programming along with some creative writing."
         />
         <meta
           property="og:image"
@@ -29,7 +29,6 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Sprite></Sprite>
             <Image
               priority
               src="/images/profile.jpg"
@@ -43,14 +42,7 @@ export default function Layout({ children, home }) {
         ) : (
           <>
             <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=""
-              />
+              <Coffee/>
             </Link>
             <h2 className={utilStyles.headingLg}>
               <Link href="/" className={utilStyles.colorInherit}>

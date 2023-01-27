@@ -5,10 +5,8 @@ import useCanvas from './useCanvas'
 
 const Canvas = props => {  
   
-  const { draw, ...rest } = props
-  const canvasRef = useCanvas(draw)
-  
-  return <canvas ref={canvasRef} {...rest}/>
+  const canvasRef = useCanvas()
+  return <canvas ref={canvasRef}/>
 }
 
 export default Canvas
