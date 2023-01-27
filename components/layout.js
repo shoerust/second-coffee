@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Sprite from './sprite';
 
 const name = 'Second Coffee';
 export const siteTitle = 'Second Coffee';
@@ -28,6 +29,7 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
+            <Sprite></Sprite>
             <Image
               priority
               src="/images/profile.jpg"
