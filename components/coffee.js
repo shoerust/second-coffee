@@ -35,37 +35,39 @@ const Coffee = props => {
         };
     }, []);
 
-    const draw = context => {
+    useEffect(() => {
         const img = new Image();
         img.src = spriteSheet;
+    }, []);
+
+    const draw = (context, img) => {
         var y = 20;
         var x = frameNumber * spriteWidth;
         if (frameNumber >= frameCountWidth) {
-          x = (frameNumber - frameCount / frameCountHeight) * spriteWidth;
-          y += spriteHeight;
+            x = (frameNumber - frameCount / frameCountHeight) * spriteWidth;
+            y += spriteHeight;
         }
         context.drawImage(
-          img,
-          x,
-          y,
-          img.width,
-          img.height,
-          0,
-          0,
-          img.width,
-          img.height
+            img,
+            x,
+            y,
+            img.width,
+            img.height,
+            0,
+            0,
+            img.width,
+            img.height
         );
     }
 
     useEffect(() => {
-
         const canvas = canvasRef.current
         canvas.width = spriteWidth;
         canvas.height = spriteHeight;
         const context = canvas.getContext('2d')
-
-        //Our draw come here
-        draw(context)
+        const img = new Image();
+        img.src = spriteSheet;
+        draw(context, img)
     }, [frameNumber]);
 
     return <canvas ref={canvasRef} {...props} />
