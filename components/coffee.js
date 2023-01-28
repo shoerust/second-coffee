@@ -7,11 +7,11 @@ const Coffee = props => {
     const canvasRef = useRef(null)
     const [frameNumber, setFrameNumber] = useState(0);
 
-    const frameCount = 10;
-    const frameCountWidth = 5;
+    const frameCount = 32;
+    const frameCountWidth = 16;
     const frameCountHeight = 2;
-    const spriteWidth = 153;
-    const spriteHeight = 150;
+    const spriteWidth = 257;
+    const spriteHeight = 257;
     const spriteSheet = "/images/sprites.png";
 
     useEffect(() => {
@@ -19,8 +19,8 @@ const Coffee = props => {
 
             const scrollTop = window.scrollY;
             const maxScrollTop = event.target.scrollingElement.scrollHeight - window.innerHeight;
-            const scrollFraction = scrollTop / maxScrollTop * frameCount;
-            const frame = Math.ceil((scrollFraction * frameCount) % frameCount);
+            const scrollFraction = scrollTop / maxScrollTop;
+            const frame = Math.ceil((scrollFraction * frameCount));
             const frameNumber = Math.min(
                 frameCount - 1,
                 frame
