@@ -3,7 +3,8 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import Coffee from './coffee';
+import ArticleCoffee from './articleCoffee';
+import HomeCoffee from './homeCoffee';
 
 const name = 'Second Coffee';
 export const siteTitle = 'Second Coffee';
@@ -29,20 +30,21 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
+            {/* <Image
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt=""
-            />
+            /> */}
+            <HomeCoffee/>
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
           <>
             <Link href="/">
-              <Coffee/>
+              <ArticleCoffee/>
             </Link>
             <h2 className={utilStyles.headingMd}>
               <Link href="/" className={utilStyles.colorInherit}>
@@ -52,7 +54,7 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main className={styles.main}>{children}</main>
+      <main className={home ? styles.homeMain : styles.secondaryMain}>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>

@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react'
 
-const Coffee = props => {
+const ArticleCoffee = props => {
 
     const canvasRef = useRef(null)
     const [frameNumber, setFrameNumber] = useState(0);
@@ -71,4 +71,4 @@ const Coffee = props => {
     return <canvas ref={canvasRef} {...props} />
 }
 
-export default Coffee
+export default ArticleCoffee

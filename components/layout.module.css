@@ -16,7 +16,11 @@
     background: white;
   }
 
-  .main {
+  .homeMain {
+    margin-top: 350px;
+  }
+
+  .secondaryMain {
     margin-top: 250px;
   }
   
