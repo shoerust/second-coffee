@@ -44,7 +44,7 @@ export default function Layout({ children, home }) {
             <Link href="/">
               <Coffee/>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className={utilStyles.headingMd}>
               <Link href="/" className={utilStyles.colorInherit}>
                 {name}
               </Link>
