@@ -3,9 +3,12 @@ import Layout from '../../components/layout';
 import Head from 'next/head';
 import Date from '../../components/date';
 import { getAllPostIds, getPostData } from '../../lib/posts';
+import path from 'path';
+
+const postsDirectory = path.join(process.cwd(), 'tech');
 
 export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.id);
+    const postData = await getPostData(postsDirectory, params.id);
     return {
         props: {
             postData,
@@ -14,14 +17,14 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const paths = getAllPostIds();
+    const paths = getAllPostIds(postsDirectory);
     return {
         paths,
         fallback: false,
     };
 }
 
-export default function Post({ postData }) {
+export default function TechPost({ postData }) {
     return (
       <Layout>
         <Head>
