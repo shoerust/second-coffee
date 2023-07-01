@@ -8,8 +8,7 @@ import path from 'path';
 const postsDirectory = path.join(process.cwd(), 'tech');
 
 export async function getStaticProps({ params }) {
-    //TODO const postData = await getPostData(postsDirectory, params.id);
-    const postData = {};
+    const postData = await getPostData(postsDirectory, params.id);
     return {
         props: {
             postData,
@@ -18,8 +17,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    // TODO const paths = getAllPostIds(postsDirectory);
-    const paths = [];
+    const paths = getAllPostIds(postsDirectory);
     return {
         paths,
         fallback: false,
