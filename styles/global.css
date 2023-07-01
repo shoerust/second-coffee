@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'caslon-pro-regular';
+  src: url('/fonts/caslon-pro-regular.ttf');
+}
+
 html,
 body {
   padding: 0;
@@ -6,6 +11,7 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  font-family: 'caslon-pro-regular';
 }
 
 * {
@@ -25,3 +31,4 @@ img {
   max-width: 100%;
   display: block;
 }
+

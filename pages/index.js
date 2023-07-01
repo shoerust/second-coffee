@@ -21,7 +21,7 @@ export default function Home({ allTechPostsData, allFictionPostsData }) {
   return (
     <Layout home>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-      <h2 className={utilStyles.headingLg}>Fiction</h2>
+        <h2 className={utilStyles.headingLg}>Fiction</h2>
         <ul className={utilStyles.list}>
           {allFictionPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
@@ -33,7 +33,7 @@ export default function Home({ allTechPostsData, allFictionPostsData }) {
             </li>
           ))}
         </ul>
-        <h2 className={utilStyles.headingLg}>Tech</h2>
+        {allTechPostsData.length > 0 ? <h2 className={utilStyles.headingLg}>Tech</h2> : <div/>}
         <ul className={utilStyles.list}>
           {allTechPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>

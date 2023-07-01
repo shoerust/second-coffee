@@ -32,6 +32,9 @@ export default function FictionPost({ postData }) {
         </Head>
         <article>
           <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+          {/* <div className={utilStyles.lightText}>
+            <h4>by <a href={`/about`}>{postData.author}</a></h4>
+          </div> */}
           <div className={utilStyles.lightText}>
             <Date dateString={postData.date} />
           </div>

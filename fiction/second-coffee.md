@@ -1,15 +1,16 @@
 ---
 title: 'Second Coffee'
 date: '2023-02-04'
+author: 'Will Southers'
 ---
 
 “Hudson, screen 2 off.”
 
-The lighting of Ray’s face adjusts slightly as the harsh glow of the news program on the screen in front of him disappears. The rain outside falls heavier. 
+The light on Ray’s face adjusts slightly as the harsh glow of the news program on the screen in front of him disappears. The rain outside falls heavier. 
 
-He sighs. A fire burns softly in the corner, leaving the remaining illumination of the room with a warm finish. The walls, lined with black screens and books, begin to feel as though they’re moving; closing in on a room that was once welcoming and spacious, but now feels conducive to the worst symptoms of claustrophobia.
+He sighs. A fire burns softly in the corner, warming the room with its dance of light and shadows. The walls, lined with black screens and books, begin to feel as though they’re moving. They close in on a room that was once welcoming and spacious, but is now conducive to the worst symptoms of claustrophobia.
 
-Ray closes his eyes and leans back in his armchair, focusing on the sound of the water hitting the tiles outside. A few moments pass and he opens his eyes. With the aide of his walking stick he lifts himself from the chair and slowly makes his way to the kitchen.
+Ray closes his eyes and leans back in his armchair, focusing on the sound of the water hitting the tiles outside. A few moments pass and his eyes open; a renewed sense of acceptance in his demeanour. With the aide of his walking stick he lifts himself from the chair and slowly makes his way to the kitchen.
 
 “Hudson, coffee.”
 
