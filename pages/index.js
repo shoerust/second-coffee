@@ -2,27 +2,31 @@ import Link from 'next/link';
 import Date from '../components/date';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
+import path from 'path';
 
 import { getSortedPostsData } from '../lib/posts';
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  //const allTechPostsData = getSortedPostsData(path.join(process.cwd(), 'tech'));
+  const allTechPostsData = [];
+  const allFictionPostsData = getSortedPostsData(path.join(process.cwd(), 'fiction'));
   return {
     props: {
-      allPostsData,
+      allTechPostsData,
+      allFictionPostsData
     },
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allTechPostsData, allFictionPostsData }) {
   return (
     <Layout home>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>Fiction</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allFictionPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
+              <Link href={`/fiction/${id}`}>{title}</Link>
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
@@ -30,6 +34,18 @@ export default function Home({ allPostsData }) {
             </li>
           ))}
         </ul>
+        {/* {allTechPostsData.length > 0 ? <h2 className={utilStyles.headingLg}>Tech</h2> : <div/>}
+        <ul className={utilStyles.list}>
+          {allTechPostsData.map(({ id, date, title }) => (
+            <li className={utilStyles.listItem} key={id}>
+              <Link href={`/tech/${id}`}>{title}</Link>
+              <br />
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
+            </li>
+          ))}
+        </ul> */}
       </section>
     </Layout>
   );
