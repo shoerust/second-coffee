@@ -7,7 +7,8 @@ import path from 'path';
 import { getSortedPostsData } from '../lib/posts';
 
 export async function getStaticProps() {
-  const allTechPostsData = getSortedPostsData(path.join(process.cwd(), 'tech'));
+  //const allTechPostsData = getSortedPostsData(path.join(process.cwd(), 'tech'));
+  const allTechPostsData = [];
   const allFictionPostsData = getSortedPostsData(path.join(process.cwd(), 'fiction'));
   return {
     props: {
