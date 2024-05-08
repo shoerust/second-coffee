@@ -24,16 +24,17 @@ export default function Home({ allTechPostsData, allFictionPostsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Fiction</h2>
         <ul className={utilStyles.list}>
-          {allFictionPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/fiction/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
+          {allFictionPostsData.map(({id, date, title}) => (
+              <li className={utilStyles.listItem} key={id}>
+                <Link href={`/fiction/${id}`}>{title}</Link>
+                <br/>
+                <small className={utilStyles.lightText}>
+                  <Date dateString={date}/>
+                </small>
+              </li>
           ))}
         </ul>
+        {/*<h2 className={utilStyles.headingLg}><Link href={`/about`}>About</Link></h2>*/}
         {/* {allTechPostsData.length > 0 ? <h2 className={utilStyles.headingLg}>Tech</h2> : <div/>}
         <ul className={utilStyles.list}>
           {allTechPostsData.map(({ id, date, title }) => (

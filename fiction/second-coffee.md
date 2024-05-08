@@ -14,7 +14,7 @@ Ray closes his eyes and leans back in his armchair, focusing on the sound of the
 
 “Hudson, coffee.”
 
-The coffee machine powers to life and begins the brewing process. Ray leans against the bench and watches the clouds get ever darker through the window above the sink. A soft purr breaks his reverie. He turns to see Pixel walk across the countertop towards him.
+The coffee machine powers to life and begins the brewing process. Ray leans against the bench and watches the clouds get ever darker through the window above the sink. A soft purr breaks his reverie. He turns to see Pixel walk across the counter-top towards him.
 
 “I’m sorry, old friend. I’m sorry about us”, he mutters softly, delicately brushing his fingers along the cat’s neck. Pixel purrs again, blinking in satisfaction and moving closer. Ray continues petting her while gazing back out at the storm.
 
@@ -23,7 +23,7 @@ The coffee machine beeps to signal completion and Ray removes the mug from holde
 
 Pixel follows Ray back in to the sitting room where he takes a seat at his writing desk in the corner. The window above the desk shows the same view from the kitchen; a perfect storm over rolling hills and forest. Lightning flashes in the distance.
 
-Pixel deftly manouvers up onto the desk and finds her usual place on a folded blanket in the rightmost corner. Another purr of satisfaction. Ray smiles and takes a sip.
+Pixel deftly maneuvers up onto the desk and finds her usual place on a folded blanket in the rightmost corner. Another purr of satisfaction. Ray smiles and takes a sip.
 
 He puts the mug down and opens the bottom draw of the desk. He removes a few candles and a box of matches, setting each around the desk and lighting them with a cupped hand. Pixel, seemingly used to this activity, is unperturbed by the flames.
 
@@ -31,7 +31,7 @@ Ray places the lighter back in the draw and takes another sip from his mug. As i
 
 A soft glow appears on the horizon. Expanding and refracted by raindrops on the window, it looks like headlights of a car moving closer. Ray watches it closely as it expands to cover more area, gradually becoming warmer in colour. The storm rages on, hammering against the glass. He takes another sip, his mind drifting to the many eyes that would be watching what he is watching. The eyes that have watched it.
 
-The glow becomes brighter now, a direct light spanning the horizon. The clouds reflect the light, becoming somehow angrier against the mottled sky. Ray subconsiously moves his hand over to pet Pixel. She purrs again, warm and comfortable. He drinks the last of the coffee, savouring it’s flavour while gazing at the ever expanding light outside; it’s intensity now increasing rapidly. He sighs and turns to Pixel, smiling sadly.
+The glow becomes brighter now, a direct light spanning the horizon. The clouds reflect the light, becoming somehow angrier against the mottled sky. Ray subconsciously moves his hand over to pet Pixel. She purrs again, warm and comfortable. He drinks the last of the coffee, savouring its flavour while gazing at the ever expanding light outside; it’s intensity now increasing rapidly. He sighs and turns to Pixel, smiling sadly.
 
 “Goodbye, old friend.”
 
