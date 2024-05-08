@@ -29,8 +29,8 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         {home ? (
-          <>
-            {/* <Image
+            <>
+                {/* <Image
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
@@ -38,26 +38,29 @@ export default function Layout({ children, home }) {
               width={144}
               alt=""
             /> */}
-            <HomeCoffee/>
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
+                <HomeCoffee/>
+                <h1 className={utilStyles.heading2Xl}>{name}</h1>
+                <h2 className={utilStyles.headingSm}>
+                    by <Link href="/about">Will Southers</Link>
+                </h2>
+            </>
         ) : (
-          <>
-            <Link href="/">
-              <ArticleCoffee/>
-            </Link>
-            <h2 className={utilStyles.headingMd}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
-          </>
+            <>
+                <Link href="/">
+                    <ArticleCoffee/>
+                </Link>
+                <h2 className={utilStyles.headingMd}>
+                    <Link href="/" className={utilStyles.colorInherit}>
+                        {name}
+                    </Link>
+                </h2>
+            </>
         )}
       </header>
-      <main className={home ? styles.homeMain : styles.secondaryMain}>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
+        <main className={home ? styles.homeMain : styles.secondaryMain}>{children}</main>
+        {!home && (
+            <div className={styles.backToHome}>
+            <Link href="/">← Back to home</Link>
         </div>
       )}
     </div>
