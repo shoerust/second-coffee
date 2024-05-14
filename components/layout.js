@@ -26,8 +26,8 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-        <Analytics/>
       </Head>
+      <Analytics/>
       <header className={styles.header}>
         {home ? (
             <>
