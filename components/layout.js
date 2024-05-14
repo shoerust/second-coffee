@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import ArticleCoffee from './articleCoffee';
 import HomeCoffee from './homeCoffee';
+import { Analytics } from "@vercel/analytics/react"
 
 const name = 'Second Coffee';
 export const siteTitle = 'Second Coffee';
@@ -26,6 +26,7 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <Analytics/>
       </Head>
       <header className={styles.header}>
         {home ? (

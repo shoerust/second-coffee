@@ -16,8 +16,8 @@ const HomeCoffee = props => {
     const spriteSheet = "/images/sprites.png";
 
     const draw = (context, img) => {
-        var y = 0;
-        var x = frameNumber * spriteWidth;
+        let y = 0;
+        let x = frameNumber * spriteWidth;
         if (frameNumber >= frameCountWidth) {
             x = (frameNumber - frameCount / frameCountHeight) * spriteWidth;
             y += spriteHeight;
@@ -50,7 +50,7 @@ const HomeCoffee = props => {
         img.onload = () => {
             draw(context, img);
         };
-        draw(context, img); //required to avoid flickering in Safari
+        //draw(context, img); //required to avoid flickering in Safari
     }, [frameNumber]);
 
     return <canvas ref={canvasRef} {...props} />
