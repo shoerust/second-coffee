@@ -29,6 +29,9 @@ export default function About() {
                           width={144}
                           alt=""
                         />
+            <p>
+                P.S. you can find me on <a href="https://bsky.app/profile/second.coffee" target="_blank">bluesky</a> and other places as <a href="https://x.com/shoerust" target="_blank">shoerust</a>
+            </p>
         </Layout>
     </>;
 }
