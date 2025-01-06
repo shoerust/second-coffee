@@ -38,7 +38,7 @@ Disappearing every scar
 
 <br/>
 
-To roam is to bare witness
+To roam is to bear witness
 
 To roam is to explore 
 
