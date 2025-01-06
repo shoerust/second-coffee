@@ -10,15 +10,17 @@ export async function getStaticProps() {
   //const allTechPostsData = getSortedPostsData(path.join(process.cwd(), 'tech'));
   const allTechPostsData = [];
   const allFictionPostsData = getSortedPostsData(path.join(process.cwd(), 'fiction'));
+  const allPoetryPostData = getSortedPostsData(path.join(process.cwd(), 'poetry'));
   return {
     props: {
       allTechPostsData,
-      allFictionPostsData
+      allFictionPostsData,
+      allPoetryPostData,
     },
   };
 }
 
-export default function Home({ allTechPostsData, allFictionPostsData }) {
+export default function Home({ allTechPostsData, allFictionPostsData, allPoetryPostData }) {
   return (
     <Layout home>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -27,6 +29,18 @@ export default function Home({ allTechPostsData, allFictionPostsData }) {
           {allFictionPostsData.map(({id, date, title}) => (
               <li className={utilStyles.listItem} key={id}>
                 <Link href={`/fiction/${id}`}>{title}</Link>
+                <br/>
+                <small className={utilStyles.lightText}>
+                  <Date dateString={date}/>
+                </small>
+              </li>
+          ))}
+        </ul>
+        <h2 className={utilStyles.headingLg}>Poetry</h2>
+        <ul className={utilStyles.list}>
+          {allPoetryPostData.map(({id, date, title}) => (
+              <li className={utilStyles.listItem} key={id}>
+                <Link href={`/poetry/${id}`}>{title}</Link>
                 <br/>
                 <small className={utilStyles.lightText}>
                   <Date dateString={date}/>
