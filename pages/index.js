@@ -61,6 +61,10 @@ export default function Home({ allTechPostsData, allFictionPostsData, allPoetryP
             </li>
           ))}
         </ul> */}
+        <h2 className={utilStyles.headingLg}>Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2EDmViBNToU?si=nKioHD9asdh4kLCe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sSOZ1omx4Wk?si=r2JdUxs-TpdOog-J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/St7MILW8R1c?si=KfMZ-YOJJWPPQcfV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </section>
     </Layout>
   );
