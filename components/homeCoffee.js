@@ -1,31 +1,28 @@
 'use client';
 
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 
 const HomeCoffee = props => {
 
     const canvasRef = useRef(null)
-    const [frameNumber, setFrameNumber] = useState(32);
+    const frameRef = useRef(31);
+    const animationFrameRef = useRef(null);
 
     const frameCount = 32;
     const frameCountWidth = 16;
-    const frameCountHeight = 2;
     const scaleFactor = 2;
     const spriteWidth = 257;
     const spriteHeight = 257;
     const spriteSheet = "/images/sprites.png";
 
-    const draw = (context, img) => {
-        let y = 0;
-        let x = frameNumber * spriteWidth;
-        if (frameNumber >= frameCountWidth) {
-            x = (frameNumber - frameCount / frameCountHeight) * spriteWidth;
-            y += spriteHeight;
-        }
+    const draw = (context, img, frameNumber) => {
+        const row = frameNumber >= frameCountWidth ? 1 : 0;
+        const column = row ? frameNumber - frameCountWidth : frameNumber;
+
         context.drawImage(
             img,
-            x,
-            y,
+            column * spriteWidth,
+            row * spriteHeight,
             spriteWidth,
             spriteHeight,
             0,
@@ -33,25 +30,42 @@ const HomeCoffee = props => {
             spriteWidth / scaleFactor,
             spriteHeight / scaleFactor
         );
-        window.requestAnimationFrame(() => {
-            if (frameNumber > 0) {
-                setFrameNumber(frameNumber - 1);
-            }
-        });
     }
 
     useEffect(() => {
-        const canvas = canvasRef.current
+        const canvas = canvasRef.current;
+        const context = canvas.getContext('2d');
+
         canvas.width = spriteWidth / scaleFactor;
         canvas.height = spriteHeight / scaleFactor;
-        const context = canvas.getContext('2d')
+
         const img = new Image();
-        img.src = spriteSheet;
+        let isActive = true;
+
         img.onload = () => {
-            draw(context, img);
+            const render = () => {
+                if (!isActive) return;
+
+                draw(context, img, frameRef.current);
+
+                if (frameRef.current > 0) {
+                    frameRef.current -= 1;
+                    animationFrameRef.current = window.requestAnimationFrame(render);
+                }
+            };
+
+            render();
         };
-        //draw(context, img); //required to avoid flickering in Safari
-    }, [frameNumber]);
+        img.src = spriteSheet;
+
+        return () => {
+            isActive = false;
+            if (animationFrameRef.current) {
+                window.cancelAnimationFrame(animationFrameRef.current);
+            }
+            img.onload = null;
+        };
+    }, []);
 
     return <canvas ref={canvasRef} {...props} />
 }
